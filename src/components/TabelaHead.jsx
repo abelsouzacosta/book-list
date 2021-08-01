@@ -7,7 +7,12 @@ const TableHead = () => (
     </tr>
     <tr>
       <th>ISBN</th>
-      <th>Título</th>
+      <th>
+        Título
+        <div className="container-setinhas">
+          <div>&#8645;</div>
+        </div>
+      </th>
       <th>Autor</th>
       <th></th>
     </tr>
