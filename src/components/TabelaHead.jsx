@@ -10,7 +10,8 @@ const TableHead = () => (
       <th>
         Título
         <div className="container-setinhas">
-          <div>&#8645;</div>
+          <div>&#8593;</div>
+          <div>&#8595;</div>
         </div>
       </th>
       <th>Autor</th>

@@ -66,7 +66,8 @@ tfoot > tr {
 .container-setinhas {
   display: inline-block;
   width: 20px;
-  height: 20px;
+  height: 40px;
+  vertical-align: middle;
   margin-left: 10px;
 }
 
