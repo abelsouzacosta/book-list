@@ -3,7 +3,7 @@ import React from "react";
 const TableHead = () => (
   <thead>
     <tr>
-      <th colspan="4">Tabela de Livros</th>
+      <th colSpan="4">Tabela de Livros</th>
     </tr>
     <tr>
       <th>ISBN</th>

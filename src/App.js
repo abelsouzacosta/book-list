@@ -5,24 +5,20 @@ import TabelaFoot from "./components/TabelaFoot";
 
 class App extends Component {
   state = {
-    livros: [
-      {
-        id: "978-85-7522-632-2",
-        titulo: "Css Grid Layout",
-        autor: "Maurício Samy Silva",
-      },
-      {
-        id: "978-85-7522-677-3",
-        titulo: "Node Essencial",
-        autor: "Ricardo R. Lecheta",
-      },
-      {
-        id: "978-85-7522-512-7",
-        titulo: "Aprendendo Material Design",
-        autor: "Kyle Mew",
-      },
-    ],
+    livros: [],
   };
+
+  componentDidMount() {
+    fetch("/api/livros.json")
+      .then((response) => response.json())
+      .then((result) => this.setState({ livros: result }))
+      .catch(function (error) {
+        console.log(`Theres an error: ${error}`);
+      })
+      .finally(function () {
+        console.log(`Página carregada`);
+      });
+  }
 
   render() {
     return (
