@@ -20,11 +20,21 @@ class App extends Component {
       });
   }
 
+  // remove a linha da aplicação
+  handleRemoverLinha = (id) => {
+    // filtra todos os livros que não têm o id passado
+    const livros = this.state.livros.filter((l) => l.id !== id);
+    this.setState({ livros });
+  };
+
   render() {
     return (
       <table className="tabela">
         <TabelaHead />
-        <TabelaBody livros={this.state.livros} />
+        <TabelaBody
+          removerLinha={this.handleRemoverLinha}
+          livros={this.state.livros}
+        />
         <TabelaFoot qdeLivros={this.state.livros.length} />
       </table>
     );
